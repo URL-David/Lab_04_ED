@@ -1,0 +1,42 @@
+﻿@model Lab_04_ED.Models.Admin
+
+@{
+    ViewData["Title"] = "IndexEncargado";
+}
+
+<h1>Pagina Principal Encargadso</h1>
+
+<div style="position:absolute; left: 1180px; top:70px">
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Usiario)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Usiario)
+        </dd>
+    </dl>
+</div>
+<hr />
+<hr />
+<hr />
+<a asp-action="VerDesarrolladores" class="btn btn-dark btn-lg btn-block" role="button">Agregar Tarea</a>
+<hr />
+<a asp-action="AgregarDesarrollador" class="btn btn-dark btn-lg btn-block" role="button">Agregar Desarrollador</a>
+<hr />
+<a asp-action="VerTareas" class="btn btn-dark btn-lg btn-block" role="button">Revisar Tareas</a>
+<hr />
+<a asp-action="VerDesarrolladores" class="btn btn-dark btn-lg btn-block" role="button">Ver Desarrolladores</a>
+<hr />
+<a asp-action="EditarDatos" class="btn btn-dark btn-lg btn-block" role="button">Editar Datos Del Usuario</a>
+<hr />
+<a asp-action="VerDesarrolladores" class="btn btn-dark btn-lg btn-block" role="button">Finalizar Tarea</a>
+<hr />
+<a asp-action="Principal"  class="btn btn-outline-info btn-lg btn-block" role="button">Regresar</a>
+

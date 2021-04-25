@@ -1,0 +1,45 @@
+﻿@model Lab_04_ED.Models.Admin
+
+@{
+    ViewData["Title"] = "EditarDatos";
+}
+
+<h1>Editar Datos</h1>
+
+<h4>Encargado</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="GuardarDatos">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apellido" class="control-label"></label>
+                <input asp-for="Apellido" class="form-control" />
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Usiario" class="control-label"></label>
+                <input asp-for="Usiario" class="form-control" />
+                <span asp-validation-for="Usiario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contraseña" class="control-label"></label>
+                <input asp-for="Contraseña" class="form-control" />
+                <span asp-validation-for="Contraseña" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar Datos " class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="IndexEncargado" class="btn btn-outline-dark">Regresar</a>
+</div>
+

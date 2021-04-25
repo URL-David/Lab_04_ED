@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Lab_04_ED.Models.AddTarea>
+
+@{
+    ViewData["Title"] = "VerTareas";
+}
+
+<h1>Ver Tareas</h1>
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tarea ID
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Proyecto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                ID Del Dasarrollador
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (AddTarea item in ViewBag.Tareas) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proyecto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdDesarrollador)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="IndexEncargado" class="btn btn-outline-dark">Regresar</a>
+</div>

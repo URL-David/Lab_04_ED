@@ -50,7 +50,7 @@ namespace Lab_04_ED
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Gestiondetareas}/{action=InicioApp}/{id?}");
             });
         }
     }

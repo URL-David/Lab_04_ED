@@ -1,0 +1,56 @@
+﻿@model Lab_04_ED.Models.AddTarea
+
+@{
+    ViewData["Title"] = "AgregarTarea";
+}
+
+<h1>Agregar Tarea</h1>
+
+<h4>Tarea</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="GuardarTarea">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" required />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <input asp-for="IdDesarrollador" class="form-control" hidden />
+            <div class="form-group">
+                <label asp-for="Descripccion" class="control-label"></label>
+                <input asp-for="Descripccion" class="form-control" required />
+                <span asp-validation-for="Descripccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Proyecto" class="control-label"></label>
+                <input asp-for="Proyecto" class="form-control" required />
+                <span asp-validation-for="Proyecto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" type="date" min="2020-04-01" max="2022-12-31" step="1">
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prioridad" class="control-label">Prioriad de 0(Min) a  5(Max)</label>
+                <input asp-for="Prioridad" class="form-control" required max="5" min="0"/>
+                <span asp-validation-for="Prioridad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdDesarrollador" class="control-label">ID Del Desarrollador</label>
+                <input asp-for="IdDesarrollador" class="form-control" disabled />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="IndexEncargado" class="btn btn-outline-dark">Regresar</a>
+</div>
+

@@ -1,0 +1,72 @@
+﻿@model Lab_04_ED.Models.AddTarea
+
+@{
+    ViewData["Title"] = "EliminarTarea";
+}
+
+<h1>Eliminar Tarea Desarrollador</h1>
+
+<h4>Tarea</h4>
+<div style="position:absolute; left: 1000px; top:70px; width:1000px">
+    <dl class="row">
+        <dt class="col-sm-2">
+            ID Desarrollador
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdDesarrollador)
+        </dd>
+        <dt class="col-sm-2">
+            Nombre Completo
+        </dt>
+        <dd class="col-sm-10">
+            @ViewBag.Nombre
+        </dd>
+    </dl>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="FinalizarTarea">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" disabled />
+                <input asp-for="Id" class="form-control" hidden />
+                <input asp-for="IdDesarrollador" class="form-control" hidden />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" disabled />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripccion" class="control-label"></label>
+                <input asp-for="Descripccion" class="form-control" disabled />
+                <span asp-validation-for="Descripccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Proyecto" class="control-label"></label>
+                <input asp-for="Proyecto" class="form-control" disabled />
+                <span asp-validation-for="Proyecto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" type="date" class="form-control" disabled />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prioridad" class="control-label"></label>
+                <input asp-for="Prioridad" class="form-control" disabled />
+                <span asp-validation-for="Prioridad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Tarea Finalizada" class="btn btn-outline-danger" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-outline-info" asp-action="IndexEncargado">Regresar</a>
+</div>
