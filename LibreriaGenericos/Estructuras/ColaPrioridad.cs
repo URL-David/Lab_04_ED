@@ -115,7 +115,10 @@ namespace Lab_04_ED.LibreriaGenericos.Estructuras
             {
                 if (TotalNodos == 1)
                     Raiz = new Nodo<T>();
+                Nodo<T> AuxNodo = new Nodo<T>();
+                AuxNodo.Valor = Raiz.Valor;
                 Raiz.Valor = NodoRaiz.Valor;
+                NodoRaiz.Valor = AuxNodo.Valor;
                 TotalNodos--;
             }
             else if (NodoRaiz.Derecha.Posicion == Posicion)
