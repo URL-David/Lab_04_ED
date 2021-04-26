@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace Lab_04_ED.Models
 {
@@ -11,6 +12,7 @@ namespace Lab_04_ED.Models
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }
+        [Display(Name = "Usuario")]
         public string Usiario { get; set; }
         public string Contraseña { get; set; }
         public int TotalDesarrolladores { get; set; }
